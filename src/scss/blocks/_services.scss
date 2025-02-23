@@ -62,9 +62,9 @@
       width: 4px;
       height: 40px;
       position: absolute;
-     background-color: colors.$title-decoration;
-      border-radius: 50px;
-      left: -2px;
+      background-color: colors.$title-decoration;
+      border-radius: 0 50px 50px 0;
+      left: 2px;
     }
   }
 
@@ -124,7 +124,7 @@
     }
 
     &__title::before {
-      left: -10px;
+      left: -6px;
     }
 
     &__menu-items {
@@ -158,11 +158,11 @@
 
     &__menu-navigation {
       &::before {
-        display: none; /* заменено content: none */
+        display: none; 
       }
 
       &::after {
-        display: none; /* заменено content: none */
+        display: none; 
       }
     }
 
@@ -176,7 +176,9 @@
     &__title {
       padding-left: 0;
       &::before {
-        left: -34px;
+        width: 3px;
+        border-radius: 50px;
+        left: -29px;
       }
     }
 

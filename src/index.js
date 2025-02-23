@@ -60,19 +60,19 @@ const swiper = new Swiper('.swiper', {
   
     burgerButton.addEventListener('click', () => {
       sidebar.classList.add('active');
-      overlay.classList.add('active');
+      overlay.classList.add('overlay--active');
     });
   
   
     closeSidebarButton.addEventListener('click', () => {
       sidebar.classList.remove('active');
-      overlay.classList.remove('active');
+      overlay.classList.remove('overlay--active');
     });
   
   
     overlay.addEventListener('click', () => {
       sidebar.classList.remove('active');
-      overlay.classList.remove('active');
+      overlay.classList.remove('overlay--active');
       closeModal(callModal);
       closeModal(feedbackModal);
       document.body.classList.remove('modal-open'); 
@@ -107,13 +107,13 @@ const swiper = new Swiper('.swiper', {
   
     function openModal(modal) {
       modal.classList.add('modal--active');
-      overlay.classList.add('active');
+      overlay.classList.add('overlay--active');
       document.body.classList.add('modal-open');
     }
   
     function closeModal(modal) {
       modal.classList.remove('modal--active');
-      overlay.classList.remove('active');
+      overlay.classList.remove('overlay--active');
       document.body.classList.remove('modal-open'); 
     }
   });
