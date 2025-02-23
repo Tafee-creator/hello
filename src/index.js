@@ -41,7 +41,7 @@ const swiper = new Swiper('.swiper', {
         expandText.textContent = 'Показать все';
       }
   
-      expandBtn.classList.toggle('expand__btn--expanded');
+      expandBtn.classList.toggle('expand-btn--expanded');
     });
   });
   

@@ -59,10 +59,27 @@ module.exports = {
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
         type: 'asset/resource', // Обработка изображений
+        generator: {
+          filename: (pathData) => {
+            // Все изображения будут находиться внутри папки img
+            if (pathData.filename.includes('icon')) {
+              return 'img/icons/[hash][ext][query]'; // Для иконок
+            } else if (pathData.filename.includes('brand')) {
+              return 'img/brands/[hash][ext][query]'; // Для брендов
+            } else if (pathData.filename.includes('photo')) {
+              return 'img/photo/[hash][ext][query]'; // Для фотографий
+            } else {
+              return 'img/[hash][ext][query]'; // Для всех остальных изображений
+            }
+          },
+        },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource', // Обработка шрифтов
+        generator: {
+          filename: 'fonts/[hash][ext][query]', // Все шрифты будут сохраняться в папку fonts
+        },
       },
       {
         test: /\.m?js$/, // Обработка JS файлов

@@ -2,7 +2,6 @@
 
 .service-prices {
 
-  // Скрываем на всех экранах по умолчанию
   &__header-group {
     display: none;
   }
@@ -114,14 +113,13 @@
     line-height: 24px;
   }
 
-  // Для экранов до 768px
+
   @media (max-width: 767px) {
     &__header-group {
-      display: none; // Скрываем на экранах до 768px
+      display: none; 
     }
   }
 
-  // Для экранов от 768px и выше
   @media (min-width: 768px) {
     &__pagination {
       display: none;

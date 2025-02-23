@@ -54,17 +54,19 @@
     left: -34px;
     }
   }
+
+  &__close-icon {
+    position: absolute;
+    top: 35px;
+    left: -72px;
+  }
   }
 
 .modal-feedback__form {
   margin-bottom: 19px;
 }
 
-.modal__close-icon {
-  position: absolute;
-  top: 35px;
-  left: -72px;
-}
+
 
 
 

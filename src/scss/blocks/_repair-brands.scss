@@ -3,17 +3,9 @@
 
 .repair-brands {
 
-  &__items {
-    display: flex;
-    flex-wrap: nowrap;
-    row-gap: 16px;
-    padding-left: 16px;
-    max-height: 160px;
-
-    &--expanded {
-      max-height: fit-content;
-    }
-  }
+&__items {
+	row-gap: 16px;
+}
 
   &__slider {
     max-width: 1440px;
@@ -40,7 +32,7 @@
       position: absolute;
       top: 7px;
       z-index: 10;
-      background: linear-gradient(to right, colors.$bgc-img, colors.$bgc); 
+      background: linear-gradient(to left, colors.$bgc-img, colors.$bgc); 
       right: 0;
     }
   }
@@ -99,13 +91,6 @@
       }
     }
 
-    &__items {
-      flex-wrap: wrap;
-      column-gap: 24px;
-      padding-left: 0;
-      justify-content: center;
-    }
-
     &__item {
       max-width: 224px;
     }
@@ -122,11 +107,6 @@
 
     &__slider {
       padding-top: 24px;
-    }
-
-    &__items {
-      column-gap: 32px;
-      padding-left: 0;
     }
 
     &__item {
