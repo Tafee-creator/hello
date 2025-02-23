@@ -1,0 +1,94 @@
+@use "../base/_colors";
+
+.icon {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: colors.$pink;
+
+  justify-content: center;
+  align-items: center;
+
+  &--dropdown {
+    background-image: url('~@src/img/icons/dropdown_icon.svg');
+    background-repeat: no-repeat;
+    width: 12px;
+    height: 12px;
+    margin-left: 10px;
+    background-size: contain;
+  }
+  
+  &--search {
+    background-image: url('~@src/img/icons/search_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+ &--close {
+    background-image: url('~@src/img/icons/close_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &--repair {
+    background-image: url('~@src/img/icons/repair_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  &--checkstatus {
+    background-image: url('~@src/img/icons/checkstatus_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+&--phone {
+    background-image: url('~@src/img/icons/phone_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+&--chat {
+    background-image: url('~@src/img/icons/chat_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+&--profile {
+    background-image: url('~@src/img/icons/profile_icon.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  
+  @media (min-width: 768px) {
+    &--profile {
+      margin-right: 0px;
+    }
+    &--human {
+      margin-right: 25px;
+    }
+    &--repair::before {
+      left: -20px;
+    }
+  }
+
+  @media (min-width: 1440px) {
+    &--repair::before {
+      display: none; 
+    }
+  }
+}
+
+
+.icon-border {
+  display: flex;
+  width: 40px;
+  height: 40px;
+  border: solid 2px colors.$pink;
+  border-radius: 50%;
+  background-image: url('~@src/img/icons/dropdown_icon.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}

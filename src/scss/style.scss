@@ -1,0 +1,25 @@
+@use "base/_reset";
+@use "base/_colors";
+@use "base/_common";
+@use "components/_buttons";
+@use "components/_forms";
+@use "components/_icons";
+@use "components/_inputs";
+@use "components/_links";
+@use "components/_slider-components";
+@use "blocks/_overlay";
+@use "blocks/_footer";
+@use "blocks/_header";
+@use "blocks/_language-navigation";
+@use "blocks/_modal";
+@use "blocks/_repair-brands";
+@use "blocks/_repair-devices";
+@use "blocks/_service-info";
+@use "blocks/_service-prices";
+@use "blocks/_services";
+@use "blocks/_sidebar-footer";
+@use "blocks/_sidebar-header";
+@use "blocks/_sidebar";
+
+@import "../fonts/stylesheet.css"; 
+

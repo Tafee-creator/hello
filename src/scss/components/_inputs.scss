@@ -1,0 +1,14 @@
+@use "../base/_colors";
+
+
+.input {
+  width: 100%;
+  border: 1px solid colors.$slide-border;
+  border-radius: 8px;
+  background-color: colors.$white;
+  padding: 12px 16px;
+
+  &--message {
+    height: 110px;
+  }
+}

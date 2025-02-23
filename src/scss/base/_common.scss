@@ -1,0 +1,109 @@
+@use "_colors" as colors; 
+
+body {
+  font-family: "TT Lakes", sans-serif;
+}
+
+.app-list {
+  list-style: none;
+}
+
+.app {
+  max-width: 1440px;
+  width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+
+  @media (min-width: 1120px) {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  @media (min-width: 1440px) {
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+
+  @media (min-width: 1650px) {
+    display: flex;
+    max-width: 1650px;
+    margin: 0 auto;
+  }
+}
+
+.page {
+  max-width: 1440px;
+  overflow: hidden;
+  margin: 0 auto;
+  background-color: colors.$page;
+
+
+  @media (min-width: 1120px), (min-width: 1440px) {
+    margin-left: 310px;
+    width: 1120px;
+  }
+
+  @media (min-width: 1650px) {
+    margin: 0;
+  }
+}
+
+.main {
+  background-color: colors.$page;
+  padding-top: 24px;
+  padding-bottom: 35px;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    padding: 24px 0 40px 8px;
+  }
+
+  @media (min-width: 1120px) {
+    padding: 42px 32px 49px 32px;
+  }
+}
+
+.container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.content--expanded {
+  max-height: 100%;
+  overflow: visible;
+}
+
+.mail {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: colors.$black;
+  margin-bottom: 12px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.phone-number {
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  font-weight: bold;
+  color: colors.$black;
+  margin-bottom: 40px;
+  transition: opacity 0.3s ease;
+}
+
+.privacy-text {
+  font-size: 14px;
+ color: colors.$text-gray;
+  line-height: 16px;
+  font-weight: 500;
+}

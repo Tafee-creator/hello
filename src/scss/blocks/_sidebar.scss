@@ -1,0 +1,102 @@
+@use "../base/_colors";
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 320px;
+  height: 100vh;
+  left: -320px;
+  top: 0;
+  padding: 18.73px 0 32px 0;
+  margin-left: 2px;
+  background-color: colors.$white;
+  position: fixed;
+  transition: left 0.3s ease;
+  z-index: 22;
+
+  &__menu {
+    flex-grow: 1;
+    margin-top: 46.27px;
+    padding-top: 4px;
+    overflow-y: auto;
+    padding-left: 24px;
+  }
+
+  &.active {
+    left: 0;
+    box-shadow:
+      -2px 0 4px colors.$shadow-one,
+      16px 0 52px colors.$shadow-two;
+  }
+
+  &__menu-item {
+    margin-bottom: 32px;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: colors.$black;
+
+    &--active {
+      position: relative;
+     color: colors.$text-gray;
+      
+      &::before {
+        content: "";
+        position: absolute;
+        width: 4px;
+        height: 32px;
+       background-color: colors.$title-decoration;
+        transform: rotate(-180deg);
+        border-radius: 50px 0 0 50px;
+        left: -24px;
+        top: -4px;
+      }
+    }
+  }
+
+  @media (min-width: 360px) {
+    width: 360px;
+    left: -360px;
+  }
+
+  @media (min-width: 768px) {
+    width: 320px;
+    left: -320px;
+  }
+
+  @media (min-width: 1120px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 306px;
+    height: 100vh;
+    z-index: 20;
+    background-color: colors.$white;
+
+    &__menu-item {
+      &--active::before {
+        border-radius: 50px;
+      }
+    }
+  }
+
+  @media (min-width: 1440px) {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 306px;
+    height: 100vh;
+    background-color: colors.$white;
+    box-shadow:
+      -2px 0 4px colors.$shadow-one;
+  }
+
+  @media (min-width: 1650px) {
+    position: sticky;
+    left: auto;
+    width: 320px;
+    height: 100vh;
+    
+  }
+}

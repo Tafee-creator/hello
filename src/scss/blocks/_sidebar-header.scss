@@ -1,0 +1,31 @@
+@use "../base/_colors";
+
+.sidebar-header {
+  padding: 0 16px;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+
+  &__logo {
+    width: 96.55px;
+    height: 50.81px;
+  }
+  
+  &__btn-search {
+    margin-left: auto;
+  }
+
+  @media (min-width: 360px) {
+    padding: 0 24px;
+    }
+ 
+  @media (min-width: 768px) {
+    padding: 0 16px;
+    }
+
+  @media (min-width: 1120px) {
+    padding-right: 29px;
+    justify-content: space-between;
+    }
+  
+}

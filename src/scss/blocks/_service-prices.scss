@@ -1,0 +1,237 @@
+@use "../base/_colors";
+
+.service-prices {
+
+  // Скрываем на всех экранах по умолчанию
+  &__header-group {
+    display: none;
+  }
+
+  &__header-title {
+    border-top: 1px solid colors.$divider-color;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: colors.$title;
+    padding: 16px;
+    font-weight: normal;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, colors.$page, colors.$white);
+  }
+
+  &__slider {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    padding: 16px 0 8px;
+
+    &::before {
+      content: "";
+      width: 24px;
+      height: 200px;
+      position: absolute;
+      top: 17px;
+      z-index: 10;
+      background: linear-gradient(to right, colors.$bgc-img, colors.$bgc);
+      left: 0;
+    }
+
+    &::after {
+      content: "";
+      width: 24px;
+      height: 200px;
+      position: absolute;
+      top: 17px;
+      z-index: 10;
+      background: linear-gradient(to right, colors.$bgc-img, colors.$bgc);
+      right: 0;
+      background: linear-gradient(to left, colors.$bgc-img, colors.$bgc);
+    }
+  }
+
+  &__items {
+    display: flex;
+    padding-left: 16px;
+    margin-bottom: 40px;
+  }
+
+  &__item {
+    width: 260px;
+    height: 200px;
+    background-color: colors.$white;
+    border-radius: 6px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    position: relative;
+  }
+
+  &__item-order {
+    position: absolute;
+    bottom: 16px;
+    justify-self: end;
+    align-self: end;
+  }
+
+  &__item-service,
+  &__item-price,
+  &__item-period {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  &__title {
+    font-size: 14px;
+    color: colors.$text-gray;
+    line-height: 16px;
+    font-weight: 500;
+  }
+
+  &__text {
+    padding-top: 4px;
+    font-size: 14px;
+    line-height: 18px;
+    letter-spacing: 0.2px;
+  }
+
+  &__disclaimer {
+    padding: 0 16px;
+    font-size: 14px;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+  }
+
+  &__proposal {
+    padding: 16px;
+    display: inline-flex;
+    align-items: center;
+    font-size: 16px;
+    letter-spacing: -0.2px;
+    font-weight: 500;
+    line-height: 24px;
+  }
+
+  // Для экранов до 768px
+  @media (max-width: 767px) {
+    &__header-group {
+      display: none; // Скрываем на экранах до 768px
+    }
+  }
+
+  // Для экранов от 768px и выше
+  @media (min-width: 768px) {
+    &__pagination {
+      display: none;
+    }
+
+    &__slider::before,
+    &__slider::after {
+      content: none;
+    }
+
+    &__title {
+      display: none;
+    }
+
+    &__items {
+      flex-direction: column;
+      padding: 24px;
+      width: calc(100% - 48px);
+      margin-bottom: 0;
+
+      li {
+        &:nth-child(2) {
+          border-top-left-radius: 6px;
+          border-top-right-radius: 6px;
+          overflow: hidden;
+        }
+
+        &:last-child {
+          border-bottom-left-radius: 6px;
+          border-bottom-right-radius: 6px;
+          overflow: hidden;
+        }
+      }
+    }
+
+    &__item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      height: 64px;
+      padding: 16px;
+      align-items: center;
+      flex-wrap: nowrap;
+      border-radius: 0;
+
+      &:hover {
+        background-color: colors.$page;
+      }
+
+      &:last-child {
+        .service-prices__item-border {
+          display: none;
+        }
+      }
+    }
+
+    &__item-border {
+      position: absolute;
+      bottom: 0;
+      left: 16px;
+      right: 16px;
+      height: 1px;
+      background-color: colors.$slide-border;
+    }
+
+    &__item-order {
+      position: relative;
+      width: 17%;
+      display: flex;
+      justify-content: flex-end;
+      top: 1px;
+    }
+
+    &__header-group {
+      display: flex;
+      background-color: colors.$page;
+      color: colors.$text-gray;
+      font-size: 14px;
+      font-weight: 500;
+      width: 100%;
+      padding: 16px;
+      align-items: center;
+    }
+
+    &__item-service {
+      white-space: nowrap;
+      width: 56%;
+    }
+
+    &__item-price {
+      white-space: nowrap;
+      width: 13%;
+    }
+
+    &__item-period {
+      white-space: nowrap;
+      width: 14%;
+    }
+
+    &__disclaimer {
+      width: 421px;
+      height: 60px;
+      padding-left: 24px;
+    }
+
+    &__proposal {
+      margin-top: 16px;
+      padding-left: 24px;
+      padding-bottom: 47px;
+    }
+  }
+}

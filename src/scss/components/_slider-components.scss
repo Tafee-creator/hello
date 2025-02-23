@@ -1,0 +1,24 @@
+@use "../base/_colors";
+
+
+.swiper-wrapper {
+    display: flex;
+  }
+  
+  .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    margin: 0 12px;
+    background: colors.$pagination;
+    stroke: colors.$stroke;
+    border-radius: 50%;
+    transition: 0.3s;
+  }
+  
+  .swiper-pagination-bullet-active {
+    background: colors.$pagination-active;
+  }
+  
+  .swiper-slide {
+    width: auto;
+  }

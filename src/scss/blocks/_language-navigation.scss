@@ -1,0 +1,23 @@
+@use "../base/_colors";
+
+
+.language-navigation {
+    display: flex;
+    gap: 7px;
+ 
+    &__item {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: colors.$black;
+  }
+  
+    &__button {
+     &--active {
+    color: colors.$text-gray;
+     }
+      &:hover {
+      color: colors.$pink;
+      }
+    }
+}

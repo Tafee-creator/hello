@@ -1,0 +1,77 @@
+@use "../base/_colors";
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 320px;
+  height: 676px;
+  background-color: colors.$white;
+  padding: 24px 16px;
+  box-shadow: 2px 0 5px colors.$modal-one;
+  z-index: 9999;
+  transition: right 0.7s ease;
+    &--active {
+    right: 0;
+    }
+    &__header {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    position: relative;
+    font-weight: 700;
+    padding: 40px 0 24px;
+
+    &::before {
+      content: "";
+      width: 4px;
+      height: 40px;
+       border-radius: 0 50px 50px 0;
+      position: absolute;
+     background-color: colors.$title-decoration;
+      border-radius: 50px;
+      left: -16px;
+    }
+    }
+    &__consent {
+    font-size: 14px;
+   color: colors.$text-gray;
+    line-height: 16px;
+    }
+ 
+ 
+  @media (min-width: 1120px) {
+  width: 440px;
+  height: 100vh;
+  padding: 0 32px;
+  box-shadow: -3px 0 3px colors.$modal-two;
+
+  &__header {
+    &::before {
+    width: 3px;
+    height: 40px;
+    border-radius: 50px;
+    left: -34px;
+    }
+  }
+  }
+
+.modal-feedback__form {
+  margin-bottom: 19px;
+}
+
+.modal__close-icon {
+  position: absolute;
+  top: 35px;
+  left: -72px;
+}
+
+
+
+}
+
+@media(max-width:767px) {
+   .modal-open>*:not(.modal) {
+    filter: blur(5px);
+  }
+}
