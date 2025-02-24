@@ -4,16 +4,16 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js', // Главный файл для входа, где подключаются SCSS и другие файлы
+  entry: './src/index.js', 
   output: {
-    filename: 'bundle.js', // Имя финального JS файла
-    path: path.resolve(__dirname, 'dist'), // Папка для вывода
-    assetModuleFilename: 'assets/[hash][ext][query]', // Путь для изображений
+    filename: 'bundle.js', 
+    path: path.resolve(__dirname, 'dist'), 
+    assetModuleFilename: 'assets/[hash][ext][query]',
   },
-  devtool: 'inline-source-map', // Генерация sourcemap для отладки
+  devtool: 'inline-source-map', 
   devServer: {
-    static: './dist', // Указываем, где искать файлы для разработки
-    hot: true, // Включение горячей перезагрузки
+    static: './dist', 
+    hot: true, 
   },
   resolve: {
     extensions: ['.js', '.scss', '.html'],
