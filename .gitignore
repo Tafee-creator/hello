@@ -5,3 +5,16 @@ dist/
 build/
 node_modules/
 .env
+
+# IDE и Editor specific files
+.eslintignore
+.eslintrc.json
+.gitattributes
+eslint.config.mjs
+.editorconfig
+postcss.config.js
+
+# Логи и временные файлы
+*.log
+*.tmp
+temp/
