@@ -1,1 +1,7 @@
-node_modules
+# Игнорировать скомпилированные файлы
+*.css
+*.scssc
+dist/
+build/
+node_modules/
+.env
