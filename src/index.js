@@ -57,27 +57,23 @@ const swiper = new Swiper('.swiper', {
     const overlay = document.querySelector('.overlay');
     const formSubmitBtns = document.querySelectorAll('.button--submit');  
   
-  
     burgerButton.addEventListener('click', () => {
       sidebar.classList.add('active');
       overlay.classList.add('overlay--active');
     });
-  
-  
+
     closeSidebarButton.addEventListener('click', () => {
       sidebar.classList.remove('active');
       overlay.classList.remove('overlay--active');
     });
   
-  
     overlay.addEventListener('click', () => {
       sidebar.classList.remove('active');
-      overlay.classList.remove('overlay--active');
       closeModal(callModal);
       closeModal(feedbackModal);
-      document.body.classList.remove('modal-open'); 
+      overlay.classList.remove('overlay--active');
+      document.body.classList.remove('modal-open');
     });
-  
   
     openModalBtns.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -88,8 +84,7 @@ const swiper = new Swiper('.swiper', {
         }
       });
     });
-  
-  
+
     closeModalBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         closeModal(callModal);
@@ -97,15 +92,17 @@ const swiper = new Swiper('.swiper', {
       });
     });
   
-      formSubmitBtns.forEach(btn => {
-      btn.addEventListener('click', (event) => {
+    formSubmitBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
         closeModal(callModal);
         closeModal(feedbackModal);
       });
     });
   
-  
     function openModal(modal) {
+      sidebar.classList.remove('active');
+      overlay.classList.remove('overlay--active');
+      
       modal.classList.add('modal--active');
       overlay.classList.add('overlay--active');
       document.body.classList.add('modal-open');

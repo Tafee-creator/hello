@@ -2,6 +2,7 @@
 
 
 .repair-devices {
+
   &__items {
 	row-gap: 24px;
 }
@@ -74,8 +75,10 @@
   @media (min-width: 768px) {
     
     &__slider {
-      padding: 24px;
+      display: flex;
+      flex-direction: column;
       row-gap: 24px;
+      padding: 24px;
     }
 
     &__header-title {
@@ -90,6 +93,10 @@
   @media (min-width: 1120px) {
     &__header-title {
       padding: 16px 32px;
+    }
+
+    &__slider {
+      padding-top: 24px;
     }
 }
 }

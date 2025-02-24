@@ -9,26 +9,13 @@ body {
 }
 
 .app {
-  width: 100%;
+  display: flex;
   overflow: hidden;
   margin: 0 auto;
 
-  @media (min-width: 1120px) {
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-
-  @media (min-width: 1440px) {
-    display: flex;
-    justify-content: center;
-    position: relative;
-  }
-
   @media (min-width: 1650px) {
-    display: flex;
     max-width: 1650px;
-    margin: 0 auto;
+    margin: 0 105px;
   }
 }
 
@@ -49,7 +36,7 @@ body {
       }
 
   @media (min-width: 1650px) { 
-        margin-left: 427px;
+        margin-left: 322px;
      }
 }
 
