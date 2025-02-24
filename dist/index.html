@@ -12,7 +12,8 @@
       href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"
     />
     <title>Сервисный центр</title>
-  <link href="style.css" rel="stylesheet"></head>
+    <link href="style.css" rel="stylesheet" />
+  </head>
 
   <body>
     <div class="app">
@@ -176,7 +177,10 @@
               <div class="services__buttons">
                 <button class="app-btn services__button">
                   <span>Оставить заявку</span>
-                  <img src="img/icons/2f17fb686448b54d2818.svg" alt="Оставить заявку" />
+                  <img
+                    src="img/icons/2f17fb686448b54d2818.svg"
+                    alt="Оставить заявку"
+                  />
                 </button>
                 <button class="app-btn services__button">
                   <span>Статус ремонта</span>
@@ -718,9 +722,12 @@
       <form action="#" class="form">
         <input
           type="tel"
+          id="phone-call"
+          name="phone-call"
           class="input input--tel modal-call__input-tel"
           placeholder="Телефон"
           aria-label="Введите номер вашего телефона"
+          autocomplete="tel"
         />
         <div class="consent modal-call__consent">
           <p class="privacy-text">
@@ -739,6 +746,7 @@
         </button>
       </form>
     </div>
+
     <div class="modal modal-feedback">
       <button
         class="app-btn modal__close-icon icon icon--close close-modal"
@@ -748,21 +756,29 @@
       <form action="#" class="form">
         <input
           type="text"
+          id="name-feedback"
+          name="name-feedback"
           class="input input--name modal-feedback__input-name"
           placeholder="Имя"
           aria-label="Введите ваше имя"
         />
         <input
           type="tel"
+          id="phone-feedback"
+          name="phone-feedback"
           class="input input--tel modal-feedback__input-tel"
           placeholder="Телефон"
           aria-label="Введите номер вашего телефона"
+          autocomplete="tel"
         />
         <input
           type="email"
+          id="email-feedback"
+          name="email-feedback"
           class="input input--email modal-feedback__input-email"
           placeholder="Электронная почта"
           aria-label="Введите вашу электронную почту"
+          autocomplete="email"
         />
         <textarea
           name="message"
@@ -790,5 +806,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script defer src="bundle.js"></script></body>
+    <script defer src="bundle.js"></script>
+  </body>
 </html>
