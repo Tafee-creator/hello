@@ -1,21 +1,19 @@
 @use "../base/_colors";
 
-
 .sidebar-footer {
   padding-left: 24px;
 
- &__communication {
-  display: flex;
-  gap: 16px;
-  margin-bottom: 16px;
- }
+  &__communication {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+  }
 
- &__contacts {
-  font-style: normal;
-  a {
-		display: block;
-		text-decoration: none;
-	}
- }
-
+  &__contacts {
+    font-style: normal;
+    a {
+      display: block;
+      text-decoration: none;
+    }
+  }
 }

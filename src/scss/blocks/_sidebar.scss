@@ -24,9 +24,7 @@
 
   &.active {
     left: 0;
-    box-shadow:
-      -2px 0 4px colors.$shadow-one,
-      16px 0 52px colors.$shadow-two;
+    box-shadow: -2px 0 4px colors.$shadow-one, 16px 0 52px colors.$shadow-two;
   }
 
   &__menu-item {
@@ -39,14 +37,14 @@
 
     &--active {
       position: relative;
-     color: colors.$text-gray;
-      
+      color: colors.$text-gray;
+
       &::before {
         content: "";
         position: absolute;
         width: 4px;
         height: 32px;
-       background-color: colors.$title-decoration;
+        background-color: colors.$title-decoration;
         transform: rotate(-180deg);
         border-radius: 50px 0 0 50px;
         left: -24px;
@@ -81,12 +79,11 @@
   }
 
   @media (min-width: 1440px) {
-  box-shadow:
-  -2px 0 4px colors.$shadow-one;
+    box-shadow: -2px 0 4px colors.$shadow-one;
   }
 
   @media (min-width: 1650px) {
     left: auto;
     width: 320px;
-     }
+  }
 }

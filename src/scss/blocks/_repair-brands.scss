@@ -1,11 +1,9 @@
 @use "../base/_colors";
 
-
 .repair-brands {
-
-&__items {
-	row-gap: 16px;
-}
+  &__items {
+    row-gap: 16px;
+  }
 
   &__slider {
     max-width: 1440px;
@@ -13,7 +11,7 @@
     margin: 0 auto;
     position: relative;
     padding: 16px 0 24px 0;
-    
+
     &::before {
       content: "";
       width: 24px;
@@ -32,7 +30,7 @@
       position: absolute;
       top: 7px;
       z-index: 10;
-      background: linear-gradient(to left, colors.$bgc-img, colors.$bgc); 
+      background: linear-gradient(to left, colors.$bgc-img, colors.$bgc);
       right: 0;
     }
   }

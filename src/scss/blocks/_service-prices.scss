@@ -1,7 +1,6 @@
 @use "../base/_colors";
 
 .service-prices {
-
   &__header-group {
     display: none;
   }
@@ -113,10 +112,9 @@
     line-height: 24px;
   }
 
-
   @media (max-width: 767px) {
-      &__header-group {
-      display: none; 
+    &__header-group {
+      display: none;
     }
   }
 

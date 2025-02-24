@@ -1,6 +1,5 @@
 @use "../base/_colors";
 
-
 .header {
   height: 88px;
   padding: 18.59px 0;
@@ -34,7 +33,7 @@
   &__logo {
     position: relative;
     height: 50.81px;
-    left: 11px; 
+    left: 11px;
   }
 
   &__logo-img {
@@ -45,7 +44,7 @@
   &__burger {
     position: relative;
     transition: transform 0.3s ease;
-    
+
     &:hover {
       transform: scale(1.1);
     }
@@ -81,7 +80,7 @@
     }
   }
 
-  @media(max-width: 767px) {
+  @media (max-width: 767px) {
     &__icon {
       display: none;
     }
@@ -111,7 +110,7 @@
   }
 
   @media (min-width: 1120px) {
-    display: none;  
+    display: none;
     &__burger {
       display: none;
     }
@@ -122,5 +121,4 @@
       display: none;
     }
   }
-
 }

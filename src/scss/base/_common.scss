@@ -1,4 +1,4 @@
-@use "_colors" as colors; 
+@use "_colors" as colors;
 
 body {
   font-family: "TT Lakes", sans-serif;
@@ -25,19 +25,18 @@ body {
   margin: 0 auto;
   background-color: colors.$page;
 
-
   @media (min-width: 1120px) {
     margin-left: 310px;
     width: 1120px;
   }
-    
-  @media (min-width: 1440px) {
-      margin-left: 308px;
-      }
 
-  @media (min-width: 1650px) { 
-        margin-left: 322px;
-     }
+  @media (min-width: 1440px) {
+    margin-left: 308px;
+  }
+
+  @media (min-width: 1650px) {
+    margin-left: 322px;
+  }
 }
 
 .main {
@@ -56,7 +55,7 @@ body {
 }
 
 .container {
-    width: 100%;
+  width: 100%;
   padding: 0 16px;
   margin: 0 auto;
 }
@@ -92,19 +91,16 @@ body {
 
 .privacy-text {
   font-size: 14px;
- color: colors.$text-gray;
+  color: colors.$text-gray;
   line-height: 16px;
   font-weight: 500;
 }
 
-
-
-
 .repair__items {
-	display: flex;
-	flex-wrap: nowrap;
-	padding-left: 16px;
-	max-height: 160px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding-left: 16px;
+  max-height: 160px;
 
   &--expanded {
     max-height: fit-content;
@@ -112,13 +108,13 @@ body {
 
   @media (min-width: 768px) {
     flex-wrap: wrap;
-		column-gap: 24px;
-		padding-left: 0;
-		justify-content: center;
+    column-gap: 24px;
+    padding-left: 0;
+    justify-content: center;
   }
 
   @media (min-width: 1120px) {
     column-gap: 32px;
-		padding-left: 0;
+    padding-left: 0;
   }
 }

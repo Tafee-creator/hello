@@ -11,48 +11,47 @@
   align-items: center;
 
   &--search {
-    background-image: url('~@src/img/icons/search_icon.svg');
+    background-image: url("~@src/img/icons/search_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-  
- &--close {
-    background-image: url('~@src/img/icons/close_icon.svg');
+
+  &--close {
+    background-image: url("~@src/img/icons/close_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   &--repair {
-    background-image: url('~@src/img/icons/repair_icon.svg');
+    background-image: url("~@src/img/icons/repair_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-  
+
   &--checkstatus {
-    background-image: url('~@src/img/icons/checkstatus_icon.svg');
+    background-image: url("~@src/img/icons/checkstatus_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-  
-&--phone {
-    background-image: url('~@src/img/icons/phone_icon.svg');
+
+  &--phone {
+    background-image: url("~@src/img/icons/phone_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-  
-&--chat {
-    background-image: url('~@src/img/icons/chat_icon.svg');
+
+  &--chat {
+    background-image: url("~@src/img/icons/chat_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-  
-&--profile {
-    background-image: url('~@src/img/icons/profile_icon.svg');
+
+  &--profile {
+    background-image: url("~@src/img/icons/profile_icon.svg");
     background-repeat: no-repeat;
     background-position: center;
   }
-  
-  
+
   @media (min-width: 768px) {
     &--profile {
       margin-right: 0px;
@@ -67,11 +66,10 @@
 
   @media (min-width: 1440px) {
     &--repair::before {
-      display: none; 
+      display: none;
     }
   }
 }
-
 
 .icon-border {
   display: flex;
@@ -79,7 +77,7 @@
   height: 40px;
   border: solid 2px colors.$pink;
   border-radius: 50%;
-  background-image: url('~@src/img/icons/dropdown_icon.svg');
+  background-image: url("~@src/img/icons/dropdown_icon.svg");
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -88,7 +86,7 @@
   display: inline-block;
   width: 12px;
   height: 12px;
-  background-image: url('~@src/img/icons/dropdown_icon.svg');
+  background-image: url("~@src/img/icons/dropdown_icon.svg");
   background-repeat: no-repeat;
   background-size: contain;
   margin-left: 10px;

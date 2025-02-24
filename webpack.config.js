@@ -4,27 +4,27 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
   mode: 'development',
-  entry: './src/index.js', 
+  entry: './src/index.js',
   output: {
-    filename: 'bundle.js', 
-    path: path.resolve(__dirname, 'dist'), 
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     assetModuleFilename: 'assets/[hash][ext][query]',
   },
-  devtool: 'inline-source-map', 
+  devtool: 'inline-source-map',
   devServer: {
-    static: './dist', 
-    hot: true, 
+    static: './dist',
+    hot: true,
   },
   resolve: {
     extensions: ['.js', '.scss', '.html'],
     alias: {
-      '@src': path.resolve(__dirname, 'src'), // Настроим алиас для @src
+      '@src': path.resolve(__dirname, 'src'),
     },
   },
   module: {
     rules: [
       {
-        test: /\.html$/i, // Обработка HTML файлов
+        test: /\.html$/i,
         loader: 'html-loader',
         options: {
           sources: {
@@ -44,45 +44,45 @@ module.exports = {
       {
         test: /\.scss$/i,
         use: [
-          MiniCssExtractPlugin.loader, // Извлечение CSS в отдельные файлы
-          'css-loader', // Обработка CSS
-          'postcss-loader', // Обработка PostCSS (если используется, например, autoprefixer)
-          'resolve-url-loader', // Разрешение путей для ресурсов, таких как изображения в SCSS
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'resolve-url-loader',
           {
-            loader: 'sass-loader', // Обработка SCSS
+            loader: 'sass-loader',
             options: {
-              sourceMap: true, // Включение source maps для правильной работы resolve-url-loader
+              sourceMap: true,
             },
           },
         ],
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif)$/i,
-        type: 'asset/resource', // Обработка изображений
+        type: 'asset/resource',
         generator: {
           filename: (pathData) => {
-            // Все изображения будут находиться внутри папки img
+
             if (pathData.filename.includes('icon')) {
-              return 'img/icons/[hash][ext][query]'; // Для иконок
+              return 'img/icons/[hash][ext][query]';
             } else if (pathData.filename.includes('brand')) {
-              return 'img/brands/[hash][ext][query]'; // Для брендов
+              return 'img/brands/[hash][ext][query]';
             } else if (pathData.filename.includes('photo')) {
-              return 'img/photo/[hash][ext][query]'; // Для фотографий
+              return 'img/photo/[hash][ext][query]';
             } else {
-              return 'img/[hash][ext][query]'; // Для всех остальных изображений
+              return 'img/[hash][ext][query]';
             }
           },
         },
       },
       {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/resource', // Обработка шрифтов
+        type: 'asset/resource',
         generator: {
-          filename: 'fonts/[hash][ext][query]', // Все шрифты будут сохраняться в папку fonts
+          filename: 'fonts/[hash][ext][query]',
         },
       },
       {
-        test: /\.m?js$/, // Обработка JS файлов
+        test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
@@ -95,12 +95,12 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html', // Шаблон HTML
-      filename: 'index.html', // Выходной файл HTML
-      inject: 'body', // Вставка JS в конец body
+      template: './src/index.html',
+      filename: 'index.html',
+      inject: 'body',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css', // Выходной файл для стилей
+      filename: 'style.css', 
     }),
   ],
   stats: {

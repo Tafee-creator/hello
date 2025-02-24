@@ -4,11 +4,11 @@
   background: transparent;
   border: none;
   cursor: pointer;
- transition: filter 0.3s ease;
-	&:hover {
-		filter: contrast(1.5);
-		opacity: 0.6;
-	}
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: contrast(1.5);
+    opacity: 0.6;
+  }
 }
 
 .button {
@@ -24,7 +24,7 @@
   width: 119px;
   height: 32px;
   &::after {
-    content: url('~@src/img/icons/dropdown-white.svg');
+    content: url("~@src/img/icons/dropdown-white.svg");
     position: absolute;
     right: 15px;
     top: 9px;
@@ -47,7 +47,7 @@
     height: 24px;
     transition: transform 0.3s ease;
     display: inline-block;
-    background-image: url('~@src/img/icons/expand_icon.svg');
+    background-image: url("~@src/img/icons/expand_icon.svg");
     background-repeat: no-repeat;
   }
 
@@ -63,7 +63,6 @@
       transform: rotate(180deg);
     }
   }
-  
 
   @media (min-width: 768px) {
     display: flex;
