@@ -46,7 +46,7 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'postcss-loader',
+          'postcss-loader', 
           'resolve-url-loader',
           {
             loader: 'sass-loader',
@@ -61,7 +61,6 @@ module.exports = {
         type: 'asset/resource',
         generator: {
           filename: (pathData) => {
-
             if (pathData.filename.includes('icon')) {
               return 'img/icons/[hash][ext][query]';
             } else if (pathData.filename.includes('brand')) {
@@ -100,7 +99,7 @@ module.exports = {
       inject: 'body',
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css', 
+      filename: 'style.css',
     }),
   ],
   stats: {
