@@ -708,14 +708,13 @@
       </div>
     </div>
 
-    <div class="modal-blur"></div>
     <div class="modal modal-call">
       <button
         class="app-btn modal__close-icon icon icon--close close-modal"
         aria-label="Закрыть модальное окно"
       ></button>
       <h2 class="modal__header">Заказать звонок</h2>
-      <form action="#" class="form">
+      <form action="#" class="form" method="post" autocomplete="on">
         <input
           type="tel"
           id="phone-call"
@@ -749,7 +748,7 @@
         aria-label="Закрыть модальное окно"
       ></button>
       <h2 class="modal__header">Обратная связь</h2>
-      <form action="#" class="form">
+      <form action="#" class="form" method="post" autocomplete="on">
         <input
           type="text"
           id="name-feedback"
@@ -757,6 +756,7 @@
           class="input input--name modal-feedback__input-name"
           placeholder="Имя"
           aria-label="Введите ваше имя"
+          autocomplete="name"
         />
         <input
           type="tel"
@@ -800,7 +800,6 @@
         </button>
       </form>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </body>
