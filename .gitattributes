@@ -1,0 +1,4 @@
+* text=auto
+dist/bundle.js text eol=lf
+dist/index.html text eol=lf
+dist/style.css text eol=lf
