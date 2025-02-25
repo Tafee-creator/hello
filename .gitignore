@@ -1,7 +1,4 @@
 # Игнорировать скомпилированные файлы
-build/
-node_modules/
-.env
 
 # IDE и Editor specific files
 .eslintignore
