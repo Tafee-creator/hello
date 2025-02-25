@@ -11,7 +11,12 @@ node_modules/
 .gitattributes
 eslint.config.mjs
 .editorconfig
+eslint.config.js
+.gitattributes
 postcss.config.js
+.prettierignore
+.prettierrc
+.prettierrc.json
 
 # Логи и временные файлы
 *.log
