@@ -19,7 +19,7 @@ const swiper = new Swiper(".swiper", {
       if (index < 9) {
         return '<span class="' + className + '"></span>';
       } else {
-        return null;
+        return '';
       }
     },
   },
