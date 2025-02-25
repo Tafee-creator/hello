@@ -1,4 +1,9 @@
 # Игнорировать скомпилированные файлы
+# *.css
+# *.scssc
+# dist/
+node_modules/
+.env
 
 # IDE и Editor specific files
 .eslintignore
@@ -12,6 +17,5 @@ postcss.config.js
 *.log
 *.tmp
 temp/
-
 
 .github/workflows
